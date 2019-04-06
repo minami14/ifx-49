@@ -1,4 +1,4 @@
-TARGET = moving_average
+TARGET = sma_bass_boost
 SRC = main.c
 LIB = ../common/bfin_gcc.c ../common/bfin_pll.c ../common/bfin_spi0.c ../common/bfin_uart0.c ../common/bfin_gpio.c ../common/bfin_timer0.c ../common/adau1361.c ../common/ifx-49.c
 
