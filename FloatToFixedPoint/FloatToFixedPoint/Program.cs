@@ -23,15 +23,22 @@ namespace FloatToFixedPoint
                     builder.Append(input);
                 }
 
-                var inputs = builder.ToString()
-                    .Replace(" ", "")
-                    .Split(',')
-                    .Select(x => decimal.Parse(x, NumberStyles.Float))
-                    .Select(x => (int) ((((uint) 1) << 24) * x))
-                    .ToArray();
-                foreach (var i in inputs)
+                try
                 {
-                    Console.WriteLine(i);
+                    var inputs = builder.ToString()
+                        .Replace(" ", "")
+                        .Split(',')
+                        .Select(x => decimal.Parse(x, NumberStyles.Float))
+                        .Select(x => (int) ((((uint) 1) << 24) * x))
+                        .ToArray();
+                    foreach (var i in inputs)
+                    {
+                        Console.WriteLine(i);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
                 }
             }
         }
