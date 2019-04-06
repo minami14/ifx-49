@@ -33,7 +33,7 @@ namespace FloatToFixedPoint
                         .ToArray();
                     foreach (var i in inputs)
                     {
-                        Console.WriteLine(i);
+                        Console.WriteLine(i.ToString() + ',');
                     }
                 }
                 catch (Exception e)
