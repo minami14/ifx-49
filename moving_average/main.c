@@ -14,7 +14,7 @@ int main(void) {
 static int32_t buf_l[NUM_SMA_SAMPLES];
 static int32_t buf_r[NUM_SMA_SAMPLES];
 static int32_t tail = 0;
-static int32_t head = NUM_SMA_SAMPLES - 1;
+static int32_t head = 1;
 static int32_t sum_l = 0;
 static int32_t sum_r = 0;
 
